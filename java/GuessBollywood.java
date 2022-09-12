@@ -47,7 +47,7 @@ class GuessBollywood{
                     count++;
                 }
             if(count==0){
-                System.out.println("  -------------------  congrats you won tha game  --------------------")
+                System.out.println("  -------------------  congrats you won tha game  --------------------");
                 break;}
         count=0;
         System.out.println();
