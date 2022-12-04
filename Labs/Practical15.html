@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        h2{
+            font-weight: bolder;
+            text-shadow: 3px 3px #ffa500  ;
+            font-size:35px;
+        }
+        hr{
+            height:4px;
+          background-color:#ffa500;
+            width:50%;
+            margin-left:50px;
+        }
+        p{
+            text-transform: bold;
+            font-size:15px;
+        }
+        input{
+            margin-left: 20px;
+            width:40%;
+            height:25px;
+        }
+        h1{
+            margin-left: 150px;
+            color:maroon
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Converter</title>
+</head>
+<body>
+    <h1>Practiacl-15 output</h1>
+    <h2>Temperature Converter</h2>
+<p>Type value to convert from Fahrenheit to Celcius</p>
+
+<p>
+  <label>Celcius</label>
+  <input id="inputcel" type="number" placeholder="Celcius" oninput="Converter(this.value)" onchange="Converter(this.value)">
+</p>
+<p>Fahrenheit: <span id="otp"></span></p>
+<hr>
+<h2>Length Converter</h2>
+<p>Type  value to convert from feet to inches</p>
+
+<p>
+  <label>Feet</label>
+  <input id="infeet" type="number" placeholder="Feet" oninput="LenConverter(this.value)" onchange="LenConverter(this.value)">
+</p>
+<p>Inches: <span id="otpinch"></span></p>
+<hr>
+<h2>Word Replacement</h2>
+<p>Type the String to be Converted , In the String the word I will be changed to you</p>
+
+<p>
+  <label>String</label>
+  <input id="inputstr" type="text" placeholder="String" oninput="Replacer(this.value)" onchange="Replacer(this.value)">
+</p>
+<p>Output String: <span id="otpstr"></span></p>
+
+<script>
+function Converter(val) {
+  document.getElementById("otp").innerHTML=(val*1.8)+32;
+}
+function LenConverter(valNum) {
+  document.getElementById("otpinch").innerHTML=valNum*12;
+}
+function Replacer(textstr) {
+  document.getElementById("otpstr").innerHTML=textstr.replace("I am","YOU are");
+}
+</script>
+
+</body>
+</html>

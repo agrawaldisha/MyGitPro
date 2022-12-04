@@ -1,0 +1,47 @@
+        #head{
+            font-size: 40px;
+            color:white;
+        }
+        body{
+            background-color: black;
+        }
+        hr{
+            height:5px;
+            background-color: black;
+        }
+        .container{
+            color:black;
+            background-color: white;
+            border:2px solid black;
+            width:50%;
+            height:600px;
+            margin:auto;
+            font-size: 25px;
+        }
+        h1{
+            text-align: center;
+        }
+        button{
+            margin-left:200px
+        }
+        label{
+            margin-bottom:50px;
+            padding-left:200px;
+        }
+        input {
+            margin-top:50px;
+            margin-left:50px;
+            height:30px;
+            max-width:150px;
+        }
+        p{
+            padding-left:200px;
+
+        }
+        button{
+            margin-top:50px;
+            height:50px;
+            width:100px;
+            border-radius: 50%;
+
+        }

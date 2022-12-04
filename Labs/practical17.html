@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body{
+           background-color: rgb(29, 3, 3);
+           font-size: 38px;
+           text-align: center;
+        }
+        h1{
+            color:white;
+           margin-bottom: 100px;
+            font-size: 30px;
+        }            
+        li{
+            margin-bottom: 40px;
+        }
+        #active:active{
+            color:antiquewhite
+        }
+        #hover:hover{
+            color:aquamarine
+        }
+        #target:target {
+            border: 2px solid black;
+        }
+        #visited:visited{
+            color:pink;
+        }
+        a:link {
+    color: forestgreen;
+    text-decoration-color: hotpink;
+    }
+
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudoclass</title>
+</head>
+<body>
+    <h1>Practical-17 Output</h1>
+    <div id="links">
+        <ul>
+    <li><a  id="active" class="a" href="https://www.w3schools.com/">Link to show active status</a><br></li>
+    <li> <a id="visited" class="a" href="https://www.w3schools.com/">Link to show Visited status</a><br></li>
+    <li><a id="target" target="_blank" class="a"href="https://www.w3schools.com/">Link to show Target status</a><br></li>
+    <li><a  id="link" class="a" href="https://www.w3schools.com/">Link to show Link status</a><br></li>
+    <li><a  id="hover"class="a" href="https://www.w3schools.com/">Link to show Hover status</a><br></li>
+</ul>
+</div>
+</body>
+</html>

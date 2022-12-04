@@ -7,16 +7,71 @@
             color:blue;
         }
         hr{
-            background-color:blue;
-            height: 5px;
+            height:5px;
+            background-color: blue;
+        }
+        #startkbc{
+            width:90%;
+            margin-left:70px;
+            border-radius: 20px;
+            margin-top: 20px;
+            height:50px;background-color:rgb(236, 236, 242);
+            font-size: 30px;
+            font-weight: 800;
+        }
+        #main{
+            height:700px;
+            margin:auto;
+            margin-top: 30px;
+            width:90%;
+            background-color:rgb(236,236,242);
+            border:2px solid black;
+            font-size: 40px;
+        }
+        .ans
+        {
+            margin-top: 30px;
+            width:30%;
+            background-color: black;
+            color:white;
+            margin-left: 30px;
+            border-radius:20px;
+            height: 40px;
+        }
+        input.incorrect,input.correct {
+            width: 20px;
+            height: 20px;
         }
     </style>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+        $document.ready(function(){
+            $(".in  correct").click(function(){
+                if($(this).is(':checked')){
+            alert('Hello');
+        } 
+            });
+        });
+    </script>
 </head>
 <body>
-    <h1>Welcome to KBC</h1><hr>
+    <h1>Welcome to KBC</h1>
+    <hr><button id="startkbc">strat KBC</button>
+    <main id="main">
+        <div id="q1">
+            Q1. select 1:<br>&nbsp
+            <input type="radio" class="correct" name="a">one<br>&nbsp
+            <input type="radio" class="incorrect" name="a">one<br>&nbsp
+            <input type="radio" class="incorrect" name="a">one<br>&nbsp
+            <input type="radio" class="incorrect" name="a">one<br>&nbsp
+            <br>
+            <button class="ans">Answer</button>
+            <div class="answer"></div>
+        </div>
+    </main>
 </body>
 </html>
