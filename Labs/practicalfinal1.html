@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>registerHandeler</title>
+</head>
+<body>
+    In my life,i have used the following web search engines <br>
+    <a href="https://www.google.com/">Yahoo</a><br>
+    <a href="https://www.google.com/">altavista</a><br>
+    <a href="https://www.google.com/">Google</a><br>
+    registerHandler();
+    <script>
+        function registerHandler()
+        {
+            let as =document.getElementsByTagName("a");
+            for(var i=0;i<as.length;i++){
+                as[i].onclick=function(){
+                    alert(i);
+                }
+            }
+        return false;
+        }
+    </script>
+</body>
+</html>

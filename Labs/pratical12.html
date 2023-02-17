@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+            $(document).ready(function(){
+  $("button").click(function(){
+    $("h1").animate({left: '250px'});
+    $("div").slide();
+    $("p").hide();
+    $("#p2").fadeIn();
+    $("#p3").fadeOut();
+    $("#p4").slideToggle();
+    $("#p5").toggle();
+  });
+});
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQUERY EFFECTS</title>
+</head>
+<body>
+    <button>CLICK ME</button>
+    <h1>Animate</h1>
+    <div> This is a slide effect</div>
+    <p> Paragraph will hide</p>
+    <p id="p2">Fadein</p>
+    <p id="p3">Fadeout</p>
+    <p id="p4">SlideTOggle</p>
+    <p id="p5">toggle</p>
+
+</body>
+</html>

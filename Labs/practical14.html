@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+    #container{
+        border: 5px solid white;
+        height:600px;
+        width:50%;
+        margin:auto;
+        background-color: black;
+    }
+    label{
+        color:white;
+        margin-left: 85px;
+        font-size: 30px;
+
+    }
+    input,button{
+        margin-top:50px;
+        margin-left:70px;
+        width:300px;
+        height:20px;
+    }
+    h1{
+        text-align: center;
+        color:white;
+
+    }
+    body{
+        background-color: maroon;
+    }
+    
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form validation</title>
+</head>
+<body>
+    <h1> Practical-14 Output</h1>
+    <div id="container">
+    <form id="form">
+        <label for="Phone number">Phone number</label>
+        <input id="phone" type="text" placeholder="Phone number"><br>
+        <label for="Email id">Email id</label>
+        <input id="email" type="text" placeholder="Email id"><br>
+        <label for="Check vowels">Check vowels</label>
+        <input id="vowel" type="text" placeholder="Check vowels"><br>
+        <label for="Check consonants">Check consonants</label>
+        <input id="consonant" type="text" placeholder="Check consonants"><br>
+        <label for="Count words">Count words</label>
+        <input id="countwords" type="text" placeholder="Count words"><br>
+        <label for="Number">Number</label>
+        <input id="num" type="number" placeholder="Number"><br>
+        <label for="submit">Submit</label>
+        <button id="submit">Submit</button><br>
+    </form>
+</div>
+    <script>
+        const submit = document.querySelector('#submit');
+
+submit.onclick = function (e) {
+    e.preventDefault();
+    checkphone(document.querySelector('#phone').value);
+}
+
+function checkphone(n) {
+    if (n[0] == 7 || n[0] == 8) {
+        if (n.length == 10) {
+            let f=1;
+            for(let i = 0; i < 10; i++) {
+                if(n[i]<'0'||n[i]>'9'){
+                    f=0;
+                    break;
+                }
+            }
+            if(f==1){
+                checkemail(document.querySelector('#email').value);
+            }
+            else {
+                alert("Please enter a valid phone number");
+            }
+        }
+        else {
+            alert("Please enter a valid phone number");
+        }
+    }
+    else {
+        alert("Please enter a valid phone number");
+    }
+}
+
+function checkemail(e) {
+    let f=0;
+    for (let i = 0; i < e.length; i++) {
+        if (e[i] == '@') {
+            for (let j = i + 1; j < e.length; j++) {
+                if (e[j] =='.'){
+                    f=1;
+                    checkvowel(document.querySelector('#vowel').value);
+                }
+            }
+        }
+    }
+    if(f==0){
+        alert("Please enter a valid email");
+    }
+}
+
+function checkvowel(t){
+    const x=['no vowels'];
+    let j=0;
+    for(let i = 0; i <t.length; i++) {
+        if(t[i]=='a'||t[i]=='e'||t[i]=='i'||t[i]=='o'||t[i]=='u'){
+            x[j]=t[i];
+            j++;
+        }
+    }
+    console.log("Vowels-> "+x);
+    checkconsonant(document.querySelector('#consonant').value);
+}
+
+function checkconsonant(t){
+    const x=['no consonants'];
+    let j=0;
+    for(let i = 0; i <t.length; i++) {
+        if(t[i]!='a'&&t[i]!='e'&&t[i]!='i'&&t[i]!='o'&&t[i]!='u'){
+            x[j]=t[i];
+            j++;
+        }
+    }
+    console.log("Consonants-> "+x);
+    countwords(document.querySelector('#countwords').value);
+}
+
+function countwords(t){
+    let n=0;
+    for(let i = 0; i <t.length; i++) {
+        if(t[i]==' '){
+            n++;
+        }
+    }
+    if(t[t.length-1]!=' '){
+        n++;
+    }
+    console.log("Total words in string are "+n);
+    even(document.querySelector('#num').value);
+}
+
+function even(n){
+    if(n%12==0){
+        console.log("Number is even");
+    }
+    else{
+        console.log("Number is odd");
+    }
+}
+    </script>
+</body>
+</html>

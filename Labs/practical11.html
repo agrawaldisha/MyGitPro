@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("p").click(function(){
+    $(this).hide();
+  });
+  $("div").dblclick(function(){
+    $(this).hide();
+  });
+  $(".enter").mouseenter(function(){
+    alert("YOU ENTERED THE EVENT");
+  });
+  $(".leave").mouseleave(function(){
+    alert("YOU LEFT");
+  });
+  $(".down").mousedown(function(){
+    alert("Mouse Down");
+  });
+  $(".up").mouseup(function(){
+    alert("Mouse UP");
+  });
+});
+</script>
+</head>
+<body>
+    <h1>Mouse Event</h1>
+<p>If you click on me, I will disappear.</p><br>
+<p>Click me away! I am click Event</p><br>
+<p>Click me too! I am also a click event</p><br>
+<div>I am a doubleclick event !Fire me away</div><br>
+<div class="enter">ENTER EVENT</div><br>
+<div class="enter">LEAVE EVENT</div><br>
+<div class="down">Down Event</div><br>
+<div class="up">Up Event</div><br>
+
+</body>
+</html>

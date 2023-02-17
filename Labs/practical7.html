@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        button{
+            margin-top:25px;
+            width:50%;
+            height:50px;
+            margin-bottom: 25px
+        }
+        div{
+            font-size: 30px;
+        }
+        input{
+            width:50%;
+            height:40px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScriptEvents</title>
+</head>
+<body>
+    <h1>Practiacl-7 output</h1>
+    <h2>Javascript Events</h2>
+    <button onclick="this.innerHTML = Date()">The time is?</button><br>
+    <div>    Enter something: <input type="text" name="txt" value="Hello" onchange="myfun(this.value)">
+        <h2 id="demo">Mouse Events</h2>
+    </div>
+
+
+<script>
+function myfun(val) {
+  alert("The input value has changed. The new value is: " + val);
+}
+document.getElementById("demo").onmouseover = function() {mouseOver()};
+document.getElementById("demo").onmouseout = function() {mouseOut()};
+
+function mouseOver() {
+  document.getElementById("demo").style.color = "red";
+}
+function mouseOut() {
+  document.getElementById("demo").style.color = "black";
+}
+</script>
+</body>
+</html>
