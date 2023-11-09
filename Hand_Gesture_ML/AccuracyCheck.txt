@@ -1,0 +1,11 @@
+from sklearn.metrics import accuracy_score
+
+# Ground truth labels
+true_labels = [1, 0, 1, 1, 0, 1, 0, 0, 1, 1]
+
+# Predicted labels from your model
+predicted_labels = [1, 0, 1, 1, 0, 0, 1, 0, 1, 1]
+
+# Calculate accuracy
+accuracy = accuracy_score(true_labels, predicted_labels)
+print(f"Accuracy: {accuracy * 100:.2f}%")
