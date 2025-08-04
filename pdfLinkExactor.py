@@ -1,3 +1,6 @@
+
+# pip install PyMuPDF 
+
 import fitz  # PyMuPDF
 
 # Correct file path (no file:///)
