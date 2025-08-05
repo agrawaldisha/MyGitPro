@@ -1,0 +1,31 @@
+#!/bin/bash
+
+# ========================
+# 🔧 CONFIGURE THESE
+GIT_REPO_URL="https://github.com/agrawaldisha/MyGitPro.git"
+FOLDER_NAME="AutomatedScripts"
+COMMIT_MSG="Add empty $FOLDER_NAME folder with .gitkeep"
+# ========================
+
+# Extract repo name from URL
+REPO_DIR=$(basename "$GIT_REPO_URL" .git)
+
+echo "📦 Cloning repository..."
+git clone "$GIT_REPO_URL"
+
+cd "$REPO_DIR" || { echo "❌ Failed to enter repo directory"; exit 1; }
+
+BRANCH_NAME=$(git rev-parse --abbrev-ref HEAD)
+
+echo "📁 Creating folder '$FOLDER_NAME'..."
+mkdir -p "$FOLDER_NAME"
+touch "$FOLDER_NAME/.gitkeep"
+
+echo "📤 Adding and committing..."
+git add "$FOLDER_NAME/.gitkeep"
+git commit -m "$COMMIT_MSG"
+
+echo "🚀 Pushing to branch '$BRANCH_NAME'..."
+git push origin "$BRANCH_NAME"
+
+echo "✅ Done! Folder '$FOLDER_NAME' pushed to $GIT_REPO_URL"
