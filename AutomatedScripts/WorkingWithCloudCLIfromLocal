@@ -1,0 +1,11 @@
+# Step 1: Install Google Cloud SDK using Homebrew
+brew install --cask google-cloud-sdk
+
+# Step 2: Initialize gcloud (you will be prompted in browser)
+gcloud init
+
+# Step 3: Authenticate application-default (needed for gsutil)
+gcloud auth application-default login
+
+# Step 4: Download the folder from the GCS bucket to current directory
+gsutil -m cp -r gs://qwiklabs-gcp-00-7159509e43fc-bucket/gsp1249/ .
